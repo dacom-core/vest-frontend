@@ -320,7 +320,7 @@ export default {
     if ((this.username != "")&&(this.username != null)) this.get_user_resources()
     if ((this.username != "")&&(this.username != null)) this.get_balances()
     if ((this.username == "")||(this.username == null)) this.edit_username_flag = true
-    
+    this.loading = false
   },
 
 
@@ -427,7 +427,6 @@ export default {
               this.tableData.push(skeleton)
               
             });
-            console.log(this.tableData)
             this.loading = false
             this.bad_connection = false
     });
